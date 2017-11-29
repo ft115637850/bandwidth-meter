@@ -1,11 +1,2 @@
-import {
-	startNetworkSpeedTest,
-	cancelNetworkSpeedTest
-} from './AsyncActions';
-
-const actions = {
-	startNetworkSpeedTest,
-	cancelNetworkSpeedTest
-};
-
-export default actions;
+import asyncActions from './AsyncActions';
+export default asyncActions;

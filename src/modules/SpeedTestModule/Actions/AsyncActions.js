@@ -46,7 +46,7 @@ function cancelNetworkSpeedTest() {
 	};
 }
 
-export {
+export default {
 	startNetworkSpeedTest,
 	cancelNetworkSpeedTest
 };
