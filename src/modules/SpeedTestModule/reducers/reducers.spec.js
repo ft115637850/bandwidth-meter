@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { createReducer, initialState } from '.';
+import { createReducerInModule as createReducer, initialState } from '.';
 import {
 	startNetworkSpeedRequest,
 	testNetworkSpeedRequest,
@@ -13,7 +13,7 @@ describe('Network speed test Reducers', () => {
 		const reducer = createReducer();
 		const action = startNetworkSpeedRequest(10);
 		const newState = reducer(initialState, action);
-		const expected =  {
+		const expected = {
 			entities: {
 				regionLatency: {
 					byName: {},
