@@ -39,7 +39,7 @@ describe('Network speed test Reducers', () => {
 		};
 
 		const action = testNetworkSpeedRequest(region);
-		const beforeState =  {
+		const beforeState = {
 			entities: {
 				regionLatency: {
 					byName: {},
@@ -54,7 +54,7 @@ describe('Network speed test Reducers', () => {
 			}
 		};
 		const newState = reducer(beforeState, action);
-		const expected =  {
+		const expected = {
 			entities: {
 				regionLatency: {
 					byName: {
@@ -84,7 +84,7 @@ describe('Network speed test Reducers', () => {
 		const reducer = createReducer();
 		const action = testNetworkSpeedSuccess('West Europe', 10);
 
-		const beforeState =  {
+		const beforeState = {
 			entities: {
 				regionLatency: {
 					byName: {
@@ -105,7 +105,7 @@ describe('Network speed test Reducers', () => {
 			}
 		};
 		const newState = reducer(beforeState, action);
-		const expected =  {
+		const expected = {
 			entities: {
 				regionLatency: {
 					byName: {
@@ -135,7 +135,7 @@ describe('Network speed test Reducers', () => {
 		const reducer = createReducer();
 		const action = cancelNetworkSpeedTestRequest();
 
-		const beforeState =  {
+		const beforeState = {
 			entities: {
 				regionLatency: {
 					byName: {
@@ -156,7 +156,7 @@ describe('Network speed test Reducers', () => {
 			}
 		};
 		const newState = reducer(beforeState, action);
-		const expected =  {
+		const expected = {
 			entities: {
 				regionLatency: {
 					byName: {
@@ -176,7 +176,7 @@ describe('Network speed test Reducers', () => {
 				showSpeedTestDialog: false
 			}
 		};
-		
+
 		assert.deepEqual(newState.testStatus, expected.testStatus);
 		assert.deepEqual(newState.entities.regionLatency.allNames, expected.entities.regionLatency.allNames);
 		assert.deepEqual(newState.entities.regionLatency.byName['West Europe'].id, '4aa320fb-0dfd-c223-73e6-08d34badaa8e');
@@ -200,7 +200,7 @@ describe('Network speed test Reducers', () => {
 		const reducer = createReducer();
 		const action = testNetworkSpeedFailure('West Europe', 10);
 
-		const beforeState =  {
+		const beforeState = {
 			entities: {
 				regionLatency: {
 					byName: {
